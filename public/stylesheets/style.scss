@@ -1,0 +1,164 @@
+/*** SASS STUFF ***/
+$bg-color: #fff;
+$font-stack: Helvetica Neue, Helvetica, Arial, sans-serif;
+$league-stack: 'League', $font-stack;
+$futura-condensed-stack: 'FuturaCondensedLight', $font-stack;
+
+@mixin border-radius($r: 6px) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+@mixin opacity($percent) {
+  opacity: $percent / 100;
+  filter: alpha(opacity=$percent);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+$percent+")";
+}
+@mixin shadow($x-offset, $y-offset, $blur, $spread, $color) {
+  -webkit-box-shadow: $x-offset $y-offset $blur $spread $color;
+  -moz-box-shadow: $x-offset $y-offset $blur $spread $color;
+  box-shadow: $x-offset $y-offset $blur $spread $color;
+}
+/*** SASS STUFF ***/
+
+.hide { display: none; }
+.show { display: block; }
+.left { float: left; }
+.right { float: right; }
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+body {
+  background: transparent url('../images/body_bg.png') left top repeat;
+  color: #4b5fa0;
+  font-family: $font-stack;
+  font-size: 12px;
+}
+
+
+section#container {
+  width: 725px;
+  height: 500px;
+  margin: 80px auto;
+  overflow: hidden;
+  background: #fff url('../images/container_bg.png') left bottom repeat-x;
+  text-align: center;
+  @include shadow(0, 1px, 3px, 1px, #888);
+    h1 a {
+    display: block;
+    width: 287px;
+    height: 61px;
+    background: transparent url('../images/sb_logo.png') no-repeat;
+    text-indent: -9000px;
+    margin: 25px auto 20px auto;
+  }
+  h2 {
+    font-family: $futura-condensed-stack;
+    font-size: 18px;
+    letter-spacing: 0.055em;
+  }
+  form {
+    width: 315px;
+    margin: 20px auto 10px auto;
+    text-align: left;
+    overflow: hidden;
+    .form_item {
+      margin: 0 auto 10px auto;
+      text-align: left;
+      overflow: hidden;
+      &.last {
+        margin-left: 21px;
+      }
+    }
+    label {
+      display: block;
+      font-family: $league-stack;
+      font-size: 18px;
+      text-align: left;
+      margin: 2px 0 6px 3px;
+    }
+    input.text {
+      width: 281px;
+      height: 32px;
+      padding: 2px 12px 4px 12px;
+      background: url('../images/input_bg.png') no-repeat left bottom;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      &.small {
+        width: 118px;
+        background: url('../images/input_bg_small.png') no-repeat left bottom;
+      }
+    }
+    a#sign_up_button {
+      display: block;
+      width: 214px;
+      height: 78px;
+      background: transparent url('../images/sign_up_button.png') left center no-repeat;
+      text-indent: -9000px;
+      clear: both;
+      margin: 10px auto;
+    }
+  }
+}
+
+.dot_divider {
+  height: 10px;
+  background: transparent url('../images/dot_divider.png') left center repeat-x;
+  margin: 12px auto;
+  &.med {
+    width: 450px;
+  }
+}
+
+header#search_bar {
+  width: 100%;
+  height: 59px;
+  background: transparent url('../images/search_bar_bg.png') left top repeat-x;
+  margin-top: 10px;
+  .content {
+    width: 1000px;
+    margin: 0 auto;
+    h1 a {
+      display: block;
+      width: 173px;
+      height: 35px;
+      background: transparent url('../images/sb_search_bar_logo.png') center center no-repeat;
+      text-indent: -9000px;
+      padding: 11px 0 11px 11px;
+    }
+  }
+}
+
+#search_content {
+  width: 1000px;
+  height: 780px;
+  margin: 0 auto 50px auto;
+  background-color: #fff;
+  overflow: hidden;
+  @include shadow(0, 1px, 3px, 1px, #888);
+  #people_list {
+    width: 222px;
+    height: 760px;
+    background: transparent url('../images/search_list_bg.png') right top repeat-y;
+    padding: 10px 5px;
+    float: left;
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+    li {
+      width: 210px;
+      height: 100px;
+      background: #ededed url('../images/search_result_bg.png') left top repeat-x;
+      border: 1px solid #dcdeea;
+      margin-bottom: 12px;
+    }
+  }
+  #map_canvas {
+    width: 776px;
+    height: 780px;
+    float: left;
+    margin-left: -8px;
+  }
+}
+

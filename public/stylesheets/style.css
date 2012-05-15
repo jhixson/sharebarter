@@ -1,8 +1,136 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*** SASS STUFF ***/
+/*** SASS STUFF ***/
+.hide {
+  display: none; }
 
-a {
-  color: #00B7FF;
-}
+.show {
+  display: block; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+strong, b {
+  font-weight: bold; }
+
+em, i {
+  font-style: italic; }
+
+body {
+  background: transparent url("../images/body_bg.png") left top repeat;
+  color: #4b5fa0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px; }
+
+section#container {
+  width: 725px;
+  height: 500px;
+  margin: 80px auto;
+  overflow: hidden;
+  background: white url("../images/container_bg.png") left bottom repeat-x;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 3px 1px #888888;
+  -moz-box-shadow: 0 1px 3px 1px #888888;
+  box-shadow: 0 1px 3px 1px #888888; }
+  section#container h1 a {
+    display: block;
+    width: 287px;
+    height: 61px;
+    background: transparent url("../images/sb_logo.png") no-repeat;
+    text-indent: -9000px;
+    margin: 25px auto 20px auto; }
+  section#container h2 {
+    font-family: "FuturaCondensedLight", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.055em; }
+  section#container form {
+    width: 315px;
+    margin: 20px auto 10px auto;
+    text-align: left;
+    overflow: hidden; }
+    section#container form .form_item {
+      margin: 0 auto 10px auto;
+      text-align: left;
+      overflow: hidden; }
+      section#container form .form_item.last {
+        margin-left: 21px; }
+    section#container form label {
+      display: block;
+      font-family: "League", Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      text-align: left;
+      margin: 2px 0 6px 3px; }
+    section#container form input.text {
+      width: 281px;
+      height: 32px;
+      padding: 2px 12px 4px 12px;
+      background: url("../images/input_bg.png") no-repeat left bottom;
+      border: none;
+      outline: none;
+      font-size: 16px; }
+      section#container form input.text.small {
+        width: 118px;
+        background: url("../images/input_bg_small.png") no-repeat left bottom; }
+    section#container form a#sign_up_button {
+      display: block;
+      width: 214px;
+      height: 78px;
+      background: transparent url("../images/sign_up_button.png") left center no-repeat;
+      text-indent: -9000px;
+      clear: both;
+      margin: 10px auto; }
+
+.dot_divider {
+  height: 10px;
+  background: transparent url("../images/dot_divider.png") left center repeat-x;
+  margin: 12px auto; }
+  .dot_divider.med {
+    width: 450px; }
+
+header#search_bar {
+  width: 100%;
+  height: 59px;
+  background: transparent url("../images/search_bar_bg.png") left top repeat-x;
+  margin-top: 10px; }
+  header#search_bar .content {
+    width: 1000px;
+    margin: 0 auto; }
+    header#search_bar .content h1 a {
+      display: block;
+      width: 173px;
+      height: 35px;
+      background: transparent url("../images/sb_search_bar_logo.png") center center no-repeat;
+      text-indent: -9000px;
+      padding: 11px 0 11px 11px; }
+
+#search_content {
+  width: 1000px;
+  height: 780px;
+  margin: 0 auto 50px auto;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 3px 1px #888888;
+  -moz-box-shadow: 0 1px 3px 1px #888888;
+  box-shadow: 0 1px 3px 1px #888888; }
+  #search_content #people_list {
+    width: 222px;
+    height: 760px;
+    background: transparent url("../images/search_list_bg.png") right top repeat-y;
+    padding: 10px 5px;
+    float: left;
+    position: relative;
+    z-index: 2;
+    overflow: auto; }
+    #search_content #people_list li {
+      width: 210px;
+      height: 100px;
+      background: #ededed url("../images/search_result_bg.png") left top repeat-x;
+      border: 1px solid #dcdeea;
+      margin-bottom: 12px; }
+  #search_content #map_canvas {
+    width: 776px;
+    height: 780px;
+    float: left;
+    margin-left: -8px; }

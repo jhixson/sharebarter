@@ -1,0 +1,71 @@
+/*** RESET ELEMENTS ***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+/*** RESET ELEMENTS ***/
+
+@font-face {
+  font-family: 'League';
+  src: url('../fonts/league_gothic.eot?') format('eot'), url('../fonts/league_gothic.woff') format('woff'), url('../fonts/league_gothic.ttf') format('truetype'), url('../fonts/league_gothic.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCondensed';
+  src: url('../fonts/Futura-Condensed-Normal.eot?') format('eot'), url('../fonts/Futura-Condensed-Normal.woff') format('woff'), url('../fonts/Futura-Condensed-Normal.ttf') format('truetype'), url('../fonts/Futura-Condensed-Normal.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCondensedLight';
+  src: url('../fonts/Futura_LT_Condensed_Light.eot?') format('eot'), url('../fonts/Futura_LT_Condensed_Light.woff') format('woff'), url('../fonts/Futura_LT_Condensed_Light.ttf') format('truetype'), url('../fonts/Futura_LT_Condensed_Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
