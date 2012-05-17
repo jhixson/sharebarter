@@ -70,6 +70,7 @@ section#container {
       &.left { clear: none; }
       &.first { margin-right: 10px; }
       &.last { margin-left: 21px; }
+      &.upload { margin-bottom: 0; }
     }
     label {
       display: block;
@@ -91,7 +92,21 @@ section#container {
         background: url('../images/input_bg_small.png') no-repeat left bottom;
       }
     }
-    input.upload { width: 240px; }
+    input.upload {
+      position: relative;
+      top: 5px;
+      z-index: 2;
+      @include opacity(0);
+    }
+    span#upload_button {
+      display: block;
+      height: 37px;
+      background: transparent url('../images/upload_image_button.png') left center no-repeat;
+      text-indent: -9000px;
+      position: relative;
+      top: -25px;
+      z-index: 1;
+    }
     a#sign_up_button, a#done_button {
       display: block;
       width: 214px;

@@ -4,18 +4,19 @@ section#container
   h2 Almost there! Just 4 more steps, and you’ll be living large!
   .dot_divider.med
   form(action="/finish", method="post", enctype="multipart/form-data")
-    .form_item.left.first
+    .form_item.left.first.upload
       .profilePicPlaceholder
-    .form_item.left
-      label(for="profilePic") Upload a Profile Picture
+    .form_item.left.upload
+      label(for="profilePic") 1. Upload a Profile Picture
       input#profilePic.upload(type="file", name="profilePic")
+      span#upload_button Upload a Profile Picture
     .form_item
-      label(for="quip") Add a Quip. 140 characters max. (Helps get you noticed)
+      label(for="quip") 2. Add a Quip. 140 characters max. (Helps get you noticed)
       input#quip.text(type="text", name="quip")
     .form_item.left
-      label(for="zip") Zip Code
+      label(for="zip") 3. Zip Code
       input#zip.text.small(type="text", name="zip")
     .form_item.left.last
-      label(for="skill") Your Skill
+      label(for="skill") 4. Your Skill
       input#skill.text.small(type="text", name="skill")
     a#done_button Done
