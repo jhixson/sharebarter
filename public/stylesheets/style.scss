@@ -66,9 +66,10 @@ section#container {
       margin: 0 auto 10px auto;
       text-align: left;
       overflow: hidden;
-      &.last {
-        margin-left: 21px;
-      }
+      clear: both;
+      &.left { clear: none; }
+      &.first { margin-right: 10px; }
+      &.last { margin-left: 21px; }
     }
     label {
       display: block;
@@ -90,7 +91,8 @@ section#container {
         background: url('../images/input_bg_small.png') no-repeat left bottom;
       }
     }
-    a#sign_up_button {
+    input.upload { width: 240px; }
+    a#sign_up_button, a#done_button {
       display: block;
       width: 214px;
       height: 78px;
@@ -99,6 +101,14 @@ section#container {
       clear: both;
       margin: 10px auto;
     }
+    a#done_button {
+      background: transparent url('../images/done_button.png') left center no-repeat;
+    }
+  }
+  .profilePicPlaceholder {
+    width: 64px;
+    height: 64px;
+    background-color: #a2a2a2;
   }
 }
 

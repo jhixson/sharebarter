@@ -1,0 +1,19 @@
+section#container
+  h1
+    a(href="/")= title
+  h2 Find and be found by Web Pros near you. Free. Simple. Lightweight.
+  .dot_divider.med
+  form(action="/register", method="post")
+    .form_item
+      label(for="email") Email Address (used to login)
+      input#email.text(type="text", name="email")
+    .form_item
+      label(for="display_name") Display Name
+      input#display_name.text(type="text", name="displayName")
+    .form_item.left
+      label(for="password") Password
+      input#password.text.small(type="password", name="password")
+    .form_item.left.last
+      label(for="confirm_password") Confirm Password
+      input#confirm_password.text.small(type="password", name="confirm_password")
+    a#sign_up_button Sign Up
