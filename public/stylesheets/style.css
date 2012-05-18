@@ -131,7 +131,21 @@ header#search_bar {
       height: 35px;
       background: transparent url("../images/sb_search_bar_logo.png") center center no-repeat;
       text-indent: -9000px;
-      padding: 11px 0 11px 11px; }
+      padding: 11px 0 11px 11px;
+      float: left; }
+    header#search_bar .content .controls {
+      position: relative;
+      float: right;
+      margin: 18px 10px 0 0; }
+      header#search_bar .content .controls span.customStyleSelectBox {
+        font-size: 11px;
+        background-color: #f2f2f2;
+        color: #333;
+        padding: 5px 5px 5px 10px;
+        border: 1px solid #888;
+        /*@include border-radius(5px);*/ }
+      header#search_bar .content .controls .customStyleSelectBoxInner {
+        background: url("../images/select_arrow.png") no-repeat center right; }
 
 #search_content {
   width: 1000px;
