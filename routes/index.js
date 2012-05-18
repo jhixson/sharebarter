@@ -3,7 +3,9 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
+
 var User = require('../models.js').User(mongoose);
 
 exports.index = function(req, res) {
