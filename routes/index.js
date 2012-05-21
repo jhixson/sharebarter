@@ -39,7 +39,7 @@ exports.signup = function(req, res) {
 
 exports.finish = function(req, res) {
   // update the user's profile... then render the map
-  console.log(req.files.profilePic);
+  console.log(req.files);
   if(req.session.user) {
     User.findOne({ _id: req.session.user}, function (err, doc){
       doc.quip = req.body.quip;
