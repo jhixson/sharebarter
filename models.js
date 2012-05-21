@@ -10,6 +10,8 @@ var User = new Schema({
   , profilePic    : { type: String, required: false }
   , quip          : { type: String, required: false }
   , zip           : { type: String, required: false }
+  , lat           : { type: String, required: false }
+  , lng           : { type: String, required: false }
   , skill         : { type: String, required: false }
 });
 

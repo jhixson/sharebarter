@@ -1,6 +1,6 @@
 var map;
 
-function initialize() {
+function findMyLocation() {
   var myOptions = {
     zoom: 6,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -48,4 +48,16 @@ function handleNoGeolocation(errorFlag) {
   map.setZoom(4);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+function codeAddress(address) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        return results[0].geometry.location;
+      } else {
+        console.log("Geocode was not successful for the following reason: " + status);
+        return false;
+      }
+    });
+  }
+
+//google.maps.event.addDomListener(window, 'load', initialize);
