@@ -35,6 +35,7 @@ app.get('/', routes.index);
 app.get('/signup', routes.signup);
 app.post('/register', routes.register);
 app.post('/finish', routes.finish);
+app.get('/list_tmp', routes.list_tmp);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

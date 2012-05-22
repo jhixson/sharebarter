@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var fs = require('fs');
+var exec = require("child_process").exec;
 
 //mongoose.connect('mongodb://localhost/test');
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
@@ -68,4 +69,11 @@ exports.finish = function(req, res) {
   }
   else
     res.render('index', { title: 'Share Barter - Find web pros in your area' });
+};
+
+exports.list_tmp = function(req, res) {
+  exec("ls -lah public/uploads/tmp", function (error, stdout, stderr) {
+    console.log(stdout);
+    res.redirect('/');
+  });
 };
