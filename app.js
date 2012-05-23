@@ -4,7 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , mongoStore = require('session-mongoose');
 
 var app = module.exports = express.createServer();
 
@@ -17,7 +18,10 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
   app.use(express.cookieParser());
-  app.use(express.session({ secret: "sharbar" }))
+  app.use(express.session({ secret: "sharbar"
+                          , store: new mongoStore({ url: process.env.MONGOLAB_URI || 'mongodb://localhost/test' })
+                          , cookie: { path: '/', maxAge: 3600000 * 24 }
+  }));
   app.use(app.router);
 });
 

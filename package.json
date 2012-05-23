@@ -11,5 +11,6 @@
     , "jade": ">= 0.0.1"
     , "bcrypt": "0.5.0"
     , "mongoose": "2.6.3"
+    , "session-mongoose": "0.0.2"
   }
 }
