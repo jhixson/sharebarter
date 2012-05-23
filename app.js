@@ -14,7 +14,7 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.bodyParser({ uploadDir: __dirname + '/public/images' }));
+  app.use(express.bodyParser({ uploadDir: __dirname + '/public/uploads' }));
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
   app.use(express.cookieParser());

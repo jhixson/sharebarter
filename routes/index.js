@@ -54,7 +54,7 @@ exports.finish = function(req, res) {
       var pic = doc._id + '_' + req.files.profilePic.name;
       var target_path = '/Users/hixsonj/Projects/sharebarter/public/uploads/' + pic;
       if(process.env.NODE_ENV == 'production')
-        target_path = '/public/images/' + pic;
+        target_path = '/app/public/uploads/' + pic;
       fs.rename(tmp_path, target_path, function(err) {
         if (err) throw err;
         fs.unlink(tmp_path, function() {
