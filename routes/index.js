@@ -2,7 +2,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var fs = require('fs');
-var exec = require("child_process").exec;
 
 //mongoose.connect('mongodb://localhost/test');
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
@@ -10,7 +9,10 @@ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
 var User = require('../models.js').User(mongoose);
 
 exports.index = function(req, res) {
-  res.render('index', { title: 'Share Barter - Find web pros in your area' });
+  User.find(function(err, users) {
+    //res.send(users);
+    res.render('index', { title: 'Share Barter - Find web pros in your area', users: users });
+  });
 };
 
 exports.register = function(req, res) {
@@ -42,7 +44,7 @@ exports.finish = function(req, res) {
   // update the user's profile... then render the map
   console.log("FILES: " + req.files);
   if(req.session.user) {
-    User.findOne({ _id: req.session.user}, function (err, doc){
+    User.findOne({ _id: req.session.user}, function (err, doc) {
       doc.quip = req.body.quip;
       doc.zip = req.body.zip;
       doc.skill = req.body.skill;
@@ -71,9 +73,15 @@ exports.finish = function(req, res) {
     res.render('index', { title: 'Share Barter - Find web pros in your area' });
 };
 
-exports.list_tmp = function(req, res) {
-  exec("ls -lah public/uploads/tmp", function (error, stdout, stderr) {
-    console.log(stdout);
-    res.redirect('/');
+exports.login = function(req, res) {
+  User.findOne({ email: req.body.email}, function (err, doc) {
+    bcrypt.compare("B4c0/\/", hash, function(err, res) {
+      if(res) {
+        req.session.user = doc._id;
+      }
+      else {
+        console.log('wrong email/password');
+      }
+    });
   });
 };

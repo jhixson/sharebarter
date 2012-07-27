@@ -3,17 +3,23 @@ header#search_bar
     h1
       a(href="/") Share Barter
     .controls
+      p I'm looking for a...
       select.select
         option Designer
         option Developer
+      p within
+      select.select
+        option 10 mi.
+        option 25 mi.
+        option 50 mi.
+      p of
+      input#starting_zip.text(type="text", name="starting_zip")
+      a#go_button(href="#")
+        img(src="/images/go_button.png", alt="Go")
 
 section#search_content
   ul#people_list
-    li test
-    li test
-    li test
-    li test
-    li test
-    li test
+    each user in users
+      li= user.displayName
   #map_canvas
 

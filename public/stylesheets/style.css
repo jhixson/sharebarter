@@ -135,8 +135,12 @@ header#search_bar {
       float: left; }
     header#search_bar .content .controls {
       position: relative;
-      float: right;
-      margin: 18px 10px 0 0; }
+      float: left;
+      margin: 18px 0 0 10px; }
+      header#search_bar .content .controls p {
+        display: inline;
+        margin: 0 12px;
+        color: #000; }
       header#search_bar .content .controls span.customStyleSelectBox {
         font-size: 11px;
         background-color: #f2f2f2;
@@ -146,6 +150,18 @@ header#search_bar {
         /*@include border-radius(5px);*/ }
       header#search_bar .content .controls .customStyleSelectBoxInner {
         background: url("../images/select_arrow.png") no-repeat center right; }
+      header#search_bar .content .controls input#starting_zip {
+        width: 40px;
+        height: 17px;
+        padding: 2px 4px;
+        border: none;
+        outline: none;
+        font-size: 11px;
+        background-color: #f2f2f2;
+        color: #333;
+        border: 1px solid #888; }
+      header#search_bar .content .controls a#go_button {
+        margin-left: 8px; }
 
 #search_content {
   width: 1000px;
